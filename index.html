@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="music-player">
+
+        <!-- Album Art -->
+        <div class="album-art-container">
+            <div class="album-art" id="albumArt">
+                <img src="images/music1.jpg" id="albumImage" alt="Album Art">
+            </div>
+        </div>
+
+        <!-- Song Info -->
+        <div class="song-info">
+            <h2 class="song-title" id="songTitle">Music One</h2>
+            <p class="song-artist" id="songArtist">Artist One</p>
+        </div>
+
+        <!-- Progress -->
+        <div class="progress-container">
+            <span class="time current-time" id="currentTime">0:00</span>
+            <div class="progress-bar">
+                <div class="progress" id="progress"></div>
+                <input type="range" id="timeline" class="timeline-slider" min="0" max="100" value="0">
+            </div>
+            <span class="time total-time" id="totalTime">0:00</span>
+        </div>
+
+        <!-- Controls -->
+        <div class="controls">
+            <button class="control-btn" id="prevBtn">⏮</button>
+            <button class="control-btn play-btn" id="playBtn">
+                <span class="play-icon">▶</span>
+                <span class="pause-icon hidden">⏸</span>
+            </button>
+            <button class="control-btn" id="nextBtn">⏭</button>
+        </div>
+
+        <!-- Volume -->
+        <div class="volume-container">
+            <button class="volume-btn" id="volumeBtn">🔊</button>
+            <input type="range" id="volumeSlider" class="volume-slider" min="0" max="100" value="70">
+        </div>
+
+        <!-- Playlist Button -->
+        <button class="playlist-toggle" id="playlistToggle">Playlist</button>
+
+    </div>
+
+    <!-- Playlist -->
+    <div class="playlist-section" id="playlistSection">
+        <h3 class="playlist-title">Playlist</h3>
+        <div class="playlist" id="playlist"></div>
+    </div>
+</div>
+
+<audio id="audioPlayer"></audio>
+<script src="script.js"></script>
+</body>
+</html>
